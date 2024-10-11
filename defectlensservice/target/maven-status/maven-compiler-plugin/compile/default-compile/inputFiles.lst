@@ -1,0 +1,8 @@
+C:\Users\ivanv\IdeaProjects\defectlens\defectlens\src\main\java\com\gnegdev\defectlens\DefectlensApplication.java
+C:\Users\ivanv\IdeaProjects\defectlens\defectlens\src\main\java\com\gnegdev\defectlens\v1\endpoints\PingController.java
+C:\Users\ivanv\IdeaProjects\defectlens\defectlens\src\main\java\com\gnegdev\defectlens\v1\endpoints\RecordsController.java
+C:\Users\ivanv\IdeaProjects\defectlens\defectlens\src\main\java\com\gnegdev\defectlens\v1\endpoints\UploadController.java
+C:\Users\ivanv\IdeaProjects\defectlens\defectlens\src\main\java\com\gnegdev\defectlens\v1\models\mapper\LaptopRecordMapper.java
+C:\Users\ivanv\IdeaProjects\defectlens\defectlens\src\main\java\com\gnegdev\defectlens\v1\models\records\LaptopRecord.java
+C:\Users\ivanv\IdeaProjects\defectlens\defectlens\src\main\java\com\gnegdev\defectlens\v1\models\request\LaptopRecordRequest.java
+C:\Users\ivanv\IdeaProjects\defectlens\defectlens\src\main\java\com\gnegdev\defectlens\v1\services\db\DBRepository.java
