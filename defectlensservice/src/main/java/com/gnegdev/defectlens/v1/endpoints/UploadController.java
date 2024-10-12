@@ -30,18 +30,17 @@ public class UploadController {
             @RequestParam(value = "keyboard_photo", required = false) MultipartFile keyboardPhoto,
             @RequestParam(value = "base_photo", required = false) MultipartFile basePhoto) {
         try {
-            String response = savePhotosToDB(new LaptopRecordRequest(
+            int response = savePhotosToDB(new LaptopRecordRequest(
                     (coverPhoto != null) ? coverPhoto.getBytes() : new byte[0],
                     (screenPhoto != null) ? screenPhoto.getBytes() : new byte[0],
                     (keyboardPhoto != null) ? keyboardPhoto.getBytes() : new byte[0],
                     (basePhoto != null) ? basePhoto.getBytes() : new byte[0]));
-            return ResponseEntity.ok("Image uploaded successfully: " + response);
+            return ResponseEntity.ok(Integer.toString(response));
         } catch (IOException e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error uploading image");
         }
     }
-    private String savePhotosToDB(LaptopRecordRequest laptopRecordRequest) throws IOException {
-        dbRepository.insertLaptopRecord(laptopRecordRequest);
-        return "Photos uploaded successfully";
+    private int savePhotosToDB(LaptopRecordRequest laptopRecordRequest) throws IOException {
+        return dbRepository.insertLaptopRecord(laptopRecordRequest);
     }
 }

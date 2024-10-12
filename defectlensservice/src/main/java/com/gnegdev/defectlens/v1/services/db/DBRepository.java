@@ -5,9 +5,10 @@ import com.gnegdev.defectlens.v1.models.records.LaptopRecord;
 import com.gnegdev.defectlens.v1.models.request.LaptopRecordRequest;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -40,12 +41,20 @@ public class DBRepository {
                 ).stream()
                 .findFirst();
     }
-    public void insertLaptopRecord(LaptopRecordRequest laptopRecordRequest) {
+    public int insertLaptopRecord(LaptopRecordRequest laptopRecordRequest) {
         var params = new MapSqlParameterSource();
+        KeyHolder keyHolder = new GeneratedKeyHolder();
         params.addValue("cover_photo", laptopRecordRequest.coverPhoto());
         params.addValue("screen_photo", laptopRecordRequest.screenPhoto());
         params.addValue("keyboard_photo", laptopRecordRequest.keyboardPhoto());
         params.addValue("base_photo", laptopRecordRequest.basePhoto());
-        jdbcTemplate.update(SQL_INSERT_LAPTOP_RECORD, params);
+        jdbcTemplate.update(SQL_INSERT_LAPTOP_RECORD, params, keyHolder, new String[] {"id"});
+        Number newId = keyHolder.getKey();
+        if (newId != null) {
+            System.out.println(newId.intValue());
+            return newId.intValue();
+        } else {
+            throw new RuntimeException("Не удалось получить ID новой записи");
+        }
     }
 }
