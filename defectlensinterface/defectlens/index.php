@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Upload Images</title>
+    <title>Загрузить фотографии</title>
     <style>
         * {
             font-family: sans-serif;
@@ -94,34 +94,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <form action="index.php" method="post" enctype="multipart/form-data" class="container">
         <div class="image-box">
-            <label for="cover_photo">Cover Photo:</label>
+            <label for="cover_photo">Фото крышки:</label>
             <input type="file" name="cover_photo" id="cover_photo"><br>
         </div>
         <div class="image-box">
-            <label for="screen_photo">Screen Photo:</label>
+            <label for="screen_photo">Фото экрана:</label>
             <input type="file" name="screen_photo" id="screen_photo"><br>
         </div>
         <div class="image-box">
-            <label for="keyboard_photo">Keyboard Photo:</label>
+            <label for="keyboard_photo">Фото клавиатуры:</label>
             <input type="file" name="keyboard_photo" id="keyboard_photo"><br>
         </div>
         <div class="image-box">
-            <label for="base_photo">Base Photo:</label>
+            <label for="base_photo">Фото корпуса:</label>
             <input type="file" name="base_photo" id="base_photo"><br>
         </div>
-        <input name="serial" placeholder="Serial number" class="id-field">
-        <button type="submit">Upload</button>
+        <input name="serial" placeholder="Серийный номер" class="id-field">
+        <button type="submit">Загрузить запись</button>
     </form>
 
     <form action="record.php" method="post" class="id-container">
         <?php if (isset($id)): ?>
-            <p style="font-size: 16px">Your laptop record ID, click the button to scan the laptop:</p>
+            <p style="font-size: 16px">ID записи ноутбука, нажмите кнопку ниже для обработки:</p>
             <input name="id" value="<?php echo $id; ?>" class="id-field">
         <?php else: ?>
             <p style="font-size: 16px">or</p>
-            <input name="id" placeholder="Record ID" class="id-field">
+            <input name="id" placeholder="ID записи" class="id-field">
         <?php endif; ?>
-            <button type="submit">Scan laptop by record ID</button>
+            <button type="submit">Проверить ноутбук по ID записи</button>
     </form>
 </body>
 </html>

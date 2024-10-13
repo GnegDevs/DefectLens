@@ -86,31 +86,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
 <body>
     <?php if (isset($data)): ?>
         <div class="container">
-        <h2 class="id-field">Record ID: <?php echo htmlspecialchars($data['id']); ?></h2>
+        <h2 class="id-field">ID записи: <?php echo htmlspecialchars($data['id']); ?></h2>
             <div class="image-box">
-                <h3>Cover Photo:</h3>
+                <h3>Фото крышки:</h3>
                 <img src="data:image/png;base64,<?php echo base64_encode($data['coverPhoto']); ?>" alt="Cover Photo">
                 <p style="font-size: 16px">Царапина</p>
             </div>
             <div class="image-box">
-                <h3>Screen Photo:</h3>
+                <h3>Фото экрана:</h3>
                 <img src="data:image/png;base64,<?php echo base64_encode($data['screenPhoto']); ?>" alt="Screen Photo">
                 <p style="font-size: 16px">Дефектов не обнаружено</p>
             </div>
             <div class="image-box">
-                <h3>Keyboard Photo:</h3>
+                <h3>Фото клавиатуры:</h3>
                 <img src="data:image/png;base64,<?php echo base64_encode($data['keyboardPhoto']); ?>" alt="Keyboard Photo">
                 <p style="font-size: 16px">Проблемы с клавишами</p>
             </div>
             <div class="image-box">
-                <h3>Base Photo:</h3>
+                <h3>Фото корпуса:</h3>
                 <img src="data:image/png;base64,<?php echo base64_encode($data['basePhoto']); ?>" alt="Base Photo">
                 <p style="font-size: 16px">Царапина</p>
             </div>
             <input readonly value="<?php echo $data['serial']?>" name="serial" placeholder="Serial number" class="id-field">
         </div>
         <form action="http://localhost:5000/defectlensmodel/api/v1/process/download" method="get" class="button-container">
-            <button type="submit">Get report</button>
+            <button type="submit">Получить отчет</button>
         </form>
     <?php endif; ?>
 </body>
