@@ -15,9 +15,9 @@ import java.util.Optional;
 public class DBRepository {
 
     private static final String SQL_GET_LAPTOP_RECORD_BY_ID =
-            "select id, cover_photo, screen_photo, keyboard_photo, base_photo from laptop_record where id = :id";
+            "select id, cover_photo, screen_photo, keyboard_photo, base_photo, serial from laptop_record where id = :id";
     private static final String SQL_INSERT_LAPTOP_RECORD =
-            "insert into laptop_record (cover_photo, screen_photo, keyboard_photo, base_photo) values (:cover_photo, :screen_photo, :keyboard_photo, :base_photo)";
+            "insert into laptop_record (cover_photo, screen_photo, keyboard_photo, base_photo, serial) values (:cover_photo, :screen_photo, :keyboard_photo, :base_photo, :serial)";
 
 
     private final LaptopRecordMapper laptopRecordMapper;
@@ -48,6 +48,7 @@ public class DBRepository {
         params.addValue("screen_photo", laptopRecordRequest.screenPhoto());
         params.addValue("keyboard_photo", laptopRecordRequest.keyboardPhoto());
         params.addValue("base_photo", laptopRecordRequest.basePhoto());
+        params.addValue("serial", laptopRecordRequest.serial());
         jdbcTemplate.update(SQL_INSERT_LAPTOP_RECORD, params, keyHolder, new String[] {"id"});
         Number newId = keyHolder.getKey();
         if (newId != null) {

@@ -17,7 +17,8 @@ public class LaptopRecordMapper implements RowMapper<LaptopRecord> {
                 rs.getBytes("cover_photo"),
                 rs.getBytes("screen_photo"),
                 rs.getBytes("keyboard_photo"),
-                rs.getBytes("base_photo")
+                rs.getBytes("base_photo"),
+                rs.getString("serial")
         );
     }
 }

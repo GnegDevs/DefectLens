@@ -28,13 +28,15 @@ public class UploadController {
             @RequestParam(value = "cover_photo", required = false) MultipartFile coverPhoto,
             @RequestParam(value = "screen_photo", required = false) MultipartFile screenPhoto,
             @RequestParam(value = "keyboard_photo", required = false) MultipartFile keyboardPhoto,
-            @RequestParam(value = "base_photo", required = false) MultipartFile basePhoto) {
+            @RequestParam(value = "base_photo", required = false) MultipartFile basePhoto,
+            @RequestParam("serial") String serial) {
         try {
             int response = savePhotosToDB(new LaptopRecordRequest(
                     (coverPhoto != null) ? coverPhoto.getBytes() : new byte[0],
                     (screenPhoto != null) ? screenPhoto.getBytes() : new byte[0],
                     (keyboardPhoto != null) ? keyboardPhoto.getBytes() : new byte[0],
-                    (basePhoto != null) ? basePhoto.getBytes() : new byte[0]));
+                    (basePhoto != null) ? basePhoto.getBytes() : new byte[0],
+                    serial));
             return ResponseEntity.ok(Integer.toString(response));
         } catch (IOException e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error uploading image");

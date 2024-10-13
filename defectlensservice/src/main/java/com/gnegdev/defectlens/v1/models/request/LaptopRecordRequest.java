@@ -4,6 +4,7 @@ public record LaptopRecordRequest(
         byte[] coverPhoto,
         byte[] screenPhoto,
         byte[] keyboardPhoto,
-        byte[] basePhoto
+        byte[] basePhoto,
+        String serial
 ) {
 }
