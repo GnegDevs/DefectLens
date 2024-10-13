@@ -118,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p style="font-size: 16px">ID записи ноутбука, нажмите кнопку ниже для обработки:</p>
             <input name="id" value="<?php echo $id; ?>" class="id-field">
         <?php else: ?>
-            <p style="font-size: 16px">or</p>
+            <p style="font-size: 16px">или</p>
             <input name="id" placeholder="ID записи" class="id-field">
         <?php endif; ?>
             <button type="submit">Проверить ноутбук по ID записи</button>
