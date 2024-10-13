@@ -1,0 +1,323 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.box01 {
+
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between
+}
+
+.box011 {
+    margin-left: 50px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box011 img {
+    margin-top: 30px;
+    display: block; /* убрать отступы вокруг картинки */
+    width: auto; /* сохранять пропорции изображения */
+    width: 90%;
+}
+
+.box012 {
+    margin-top: 70px;
+    width: 50%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+.box012 h1 {
+    width: 70%;
+    font-family: Mont ExtraLight;
+    font-size: 60px;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.box012 p {
+    width: 70%;
+    font-family: Mont ExtraLight;
+    font-size: 45px;
+    text-align: center;
+    margin-right: 15px;
+}
+
+button {
+    margin-top: 15px;
+    height: 100px;
+    width: 400px;
+    border-radius: 40px;
+    background-color: #000000; /* прозрачный фон */
+    border: none; /* без рамки */
+    cursor: pointer; /* курсор как указатель */
+    padding: 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    font-family: Mont ExtraLight;
+    font-size: 30px;
+    text-align: center;
+}
+
+.box2 {
+    margin-top: 50px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between
+}
+
+.box21 {
+    margin-top: 70px;
+    width: 50%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+input {
+    background-color: #fff;
+    color: #000000;
+    border: 3px solid #000;
+    height: 90px;
+    width: 400px;
+    margin-left: 7%;
+    margin-top: 15px;
+    text-align: center;
+    border-radius: 40px;
+    padding-left: 2%;
+}
+
+input::placeholder {
+    color: #000;
+    font-family: Mont ExtraLight;
+    font-size: 30px;
+}
+
+input[type="text"] {
+    color: #000;
+    font-family: Mont ExtraLight;
+    font-size: 30px;
+}
+
+.input-file-btn {
+    text-align: center;
+	position: relative;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	cursor: pointer;
+	outline: none;
+    background-color: #000;
+    border: none;
+    height: 100px;
+    width: 400px;
+    margin-left: 7%;
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 40px;
+    padding-left: 2%;
+    color: #fff;
+    font-family: Mont ExtraLight;
+    font-size: 30px;
+}
+
+.input-file input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+
+.box22 {
+    margin-top: 70px;
+    width: 50%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+.box22 p {
+    width: 80%;
+    font-family: Mont ExtraLight;
+    font-size: 35px;
+    text-align: center;
+    margin-right: 15px;
+}
+
+h2 {
+    margin-top: 200px;
+    width: 100%;
+    font-family: Mont ExtraLight;
+    font-size: 60px;
+    text-align: center;
+}
+
+.box3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box30 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+}
+
+.box31 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+}
+
+.box31 h1 {
+    width: 100%;
+    font-family: Mont ExtraLight;
+    font-size: 60px;
+    text-align: center;
+}
+
+.box31 img {
+
+    display: block; /* убрать отступы вокруг картинки */
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 10px solid #000;
+}
+
+.box32 {
+    flex-direction: column;
+    width: 40%;
+    text-align: left;
+}
+
+.box32 h1 {
+    width: 100%;
+    font-family: Mont ExtraLight;
+    font-size: 60px;
+    text-align: center;
+}
+
+.box32 h3 {
+    width: 100%;
+    font-family: Mont Heavy;
+    font-size: 40px;
+}
+
+.box32 p {
+    width: 80%;
+    font-family: Mont ExtraLight;
+    font-size: 40px;
+    margin-right: 15px;
+}
+
+.box33 {
+    margin-top: 70px;
+    width: 50%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+.box33 h1 {
+    width: 100%;
+    font-family: Mont ExtraLight;
+    font-size: 35px;
+    text-align: center;
+}
+
+.box4 {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 70px;
+    width: 100%;
+    height: 350px;
+    background-color: #000;
+    line-height: 10px;
+}
+
+.box41 {
+    width: 33%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box41 h3 {
+    color: #fff;
+    font-family: Mont ExtraLight;
+    font-size: 80px;
+    text-align: center;
+}
+
+.box41 p {
+    color: #fff;
+    font-family: Mont ExtraLight;
+    font-size: 20px;
+    text-align: center;
+}
+
+.box41 img {
+    margin-top: 80px;
+    display: block; /* убрать отступы вокруг картинки */
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box41 h5 {
+    margin-top: 45px;
+    color: #fff;
+    font-family: Mont ExtraLight;
+    font-size: 40px;
+    text-align: center;
+}
+
+.box41 a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: Mont ExtraLight;
+    src: url("Mont-ExtraLightDEMO.otf");
+}
+
+@font-face {
+    font-family: Mont Heavy;
+    src: url("Mont-HeavyDEMO.otf");
+}
