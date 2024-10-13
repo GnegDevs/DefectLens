@@ -1,17 +1,19 @@
 from flask import Flask, send_file
 import requests
 from buildPDF import buildPDF
+from yoloModel import get_yolo_predictions
 
 app = Flask(__name__)
 
 def processPhoto(bytea):
-    return "TODO"
+    return get_yolo_predictions(bytea)
 
 def process(id, byteas, serial):
-    #processed = list()
-    #for bytea in byteas:
-    #    processed.append(processPhoto(bytea))
-    toProcess = [[byteas[0], "Царапина"], [byteas[1], "Дефектов не обнаружено"], [byteas[2], "Проблемы с клавишами"], [byteas[3], "Царапина"], ]
+    toProcess = list()
+    for bytea in byteas:
+        toProcess.append(processPhoto(bytea))
+    
+    # toProcess = [[byteas[0], "Царапина"], [byteas[1], "Дефектов не обнаружено"], [byteas[2], "Проблемы с клавишами"], [byteas[3], "Царапина"], ]
 
     pdf = buildPDF(id, toProcess, serial)
     pdf.output("report.pdf")
